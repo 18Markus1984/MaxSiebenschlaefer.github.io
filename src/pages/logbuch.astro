@@ -8,6 +8,7 @@ import { url, projectImage } from '../lib/url';
 const projects = await getProjects();
 const years = new Date().getFullYear() - site.since;
 
+
 type Entry = { year: number; title: string; text: string; href: string; image?: string; alt?: string; external: boolean };
 const entries: Entry[] = [
   ...projects.map((p) => ({
