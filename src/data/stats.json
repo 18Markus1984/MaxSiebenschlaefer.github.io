@@ -1,0 +1,21 @@
+{
+  "updated": "2026-10-03",
+  "printables": {
+    "models": 210,
+    "followers": 353,
+    "downloads": null
+  },
+  "github": {
+    "repos": 14
+  },
+  "youtube": {
+    "videos": 40,
+    "subscribers": null
+  },
+  "topModels": [
+    { "title": "Dosenöffner", "downloads": 1300, "url": "https://www.printables.com/model/437262" },
+    { "title": "5-Achs-Roboterarm", "downloads": 1000, "url": "https://www.printables.com/model/101336" },
+    { "title": "LED-Strip-Halter", "downloads": 740, "url": "https://www.printables.com/model/100913" },
+    { "title": "Abflussstopfen", "downloads": 380, "url": "https://www.printables.com/model/1700156" }
+  ]
+}

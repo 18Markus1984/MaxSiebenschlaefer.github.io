@@ -1,0 +1,21 @@
+---
+title: Name des Projekts
+year: 2026
+summary: Ein Satz, was das Projekt macht.
+category: elektronik        # oder: druck
+controller: ESP32           # weglassen bei reinen Druckprojekten
+status: in Arbeit           # oder: fertig
+image: dateiname.jpg        # liegt in public/images/projects/, weglassen = "Foto folgt"
+imageAlt: Was auf dem Foto zu sehen ist
+order: 1                    # Platz auf der Startseite, 1 = ganz vorne
+featured: false             # true = großer Kasten auf der Elektronik-Seite (nur ein Projekt)
+specs:
+  - label: Steuerung
+    value: ESP32
+links:
+  github: https://github.com/18Markus1984/REPO
+  printables: https://www.printables.com/model/ID
+  youtube: https://youtu.be/ID
+---
+
+Zwei bis drei kurze Absätze zum Projekt.

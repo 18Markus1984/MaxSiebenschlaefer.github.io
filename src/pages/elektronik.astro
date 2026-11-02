@@ -1,0 +1,67 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+import { getProjects, groupByController } from '../lib/projects';
+import { url, projectImage } from '../lib/url';
+
+const projects = await getProjects();
+const groups = groupByController(projects);
+const featured = projects.find((p) => p.data.featured);
+---
+<Base title="Elektronik" current="elektronik" description="Elektronik-Projekte von Max Siebenschläfer, sortiert nach Mikrocontroller.">
+  <section class="board">
+    <span class="hole" style="left:22px;top:22px" aria-hidden="true"></span>
+    <span class="hole" style="right:22px;top:22px" aria-hidden="true"></span>
+    <span class="hole" style="left:22px;bottom:22px" aria-hidden="true"></span>
+    <span class="hole" style="right:22px;bottom:22px" aria-hidden="true"></span>
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <h1>Elektronik, die ich selbst entwerfe, löte und programmiere</h1>
+      <p class="lead">ESP32, Arduino und Raspberry Pi in eigenen Geräten. Gehäuse und Firmware gibt es offen dazu.</p>
+      <div class="actions">
+        <a class="btn btn-silk" href="#controller">Nach Controller</a>
+        <a class="btn btn-ghost" href={site.links.github}>GitHub</a>
+      </div>
+    </div>
+    <span class="lg" role="img" aria-label="Logo von Max Siebenschläfer als Bestückungsdruck auf der Platine"></span>
+    <div class="header-pins" aria-hidden="true">{Array.from({ length: 24 }).map(() => <span></span>)}</div>
+  </section>
+
+  <section id="controller" class="section">
+    <h2 class="h2" style="margin-bottom:8px">Projekte nach Mikrocontroller</h2>
+    {groups.map(([controller, list]) => (
+      <div class="mcu">
+        <span class="chip">{controller}</span>
+        <div class="cards">
+          {list.map((p) => (
+            <a class="card" href={url(`/projekte/${p.id}/`)}>
+              {p.data.image
+                ? <img src={projectImage(p.data.image)} alt="" width="132" height="100" loading="lazy" decoding="async" />
+                : <span class="mini-slot">Foto folgt</span>}
+              <div><h3>{p.data.title}</h3><span class="sec">{p.data.summary}</span></div>
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
+  </section>
+
+  {featured && (
+    <section id="aktuell" class="section">
+      <div class="feat">
+        {featured.data.image
+          ? <img class="feat-img" src={projectImage(featured.data.image)} alt={featured.data.imageAlt ?? ''} width="600" height="450" loading="lazy" />
+          : <div class="feat-img">Foto folgt</div>}
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <h2 class="h2">{featured.data.title}</h2>
+          <p class="sec" style="font-size:18px">{featured.data.summary}</p>
+          {featured.data.specs.length > 0 && (
+            <div class="spec">
+              {featured.data.specs.map((s) => <div><b>{s.label}</b>{s.value}</div>)}
+            </div>
+          )}
+          <a href={url(`/projekte/${featured.id}/`)} style="font-weight:600">Zum Projekt</a>
+        </div>
+      </div>
+    </section>
+  )}
+</Base>

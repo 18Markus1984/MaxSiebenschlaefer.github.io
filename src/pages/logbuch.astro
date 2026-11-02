@@ -1,0 +1,68 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+import extra from '../data/logbuch.json';
+import { getProjects } from '../lib/projects';
+import { url, projectImage } from '../lib/url';
+
+const projects = await getProjects();
+const years = new Date().getFullYear() - site.since;
+
+type Entry = { year: number; title: string; text: string; href: string; image?: string; alt?: string; external: boolean };
+const entries: Entry[] = [
+  ...projects.map((p) => ({
+    year: p.data.year,
+    title: p.data.title,
+    text: p.data.summary,
+    href: url(`/projekte/${p.id}/`),
+    image: p.data.image,
+    alt: p.data.imageAlt,
+    external: false,
+  })),
+  ...extra.map((e) => ({ year: e.year, title: e.title, text: e.text, href: e.url, external: true })),
+];
+const byYear = [...new Set(entries.map((e) => e.year))]
+  .sort((a, b) => b - a)
+  .map((y) => [y, entries.filter((e) => e.year === y)] as const);
+
+// Neuestes Projekt mit Foto oben rechts
+const latest = projects.filter((p) => p.data.image).sort((a, b) => b.data.year - a.data.year || a.data.order - b.data.order)[0];
+---
+<Base title="Logbuch" current="logbuch" bodyClass="dots" description={`${years} Jahre Werkstatt von Max Siebenschläfer, Jahr für Jahr.`}>
+  <section class="hero" style="padding-top:48px">
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <h1 style="font-size:64px;line-height:1.02">{years} Jahre Werkstatt in einem Logbuch</h1>
+      <p class="lead sec">Seit {site.since} drucke, löte und programmiere ich. Hier steht, was dabei entstanden ist, Jahr für Jahr.</p>
+    </div>
+    {latest && (
+      <a class="bench" href={url(`/projekte/${latest.id}/`)}>
+        <img src={projectImage(latest.data.image)} alt={latest.data.imageAlt ?? ''} width="520" height="390" />
+        <div style="padding:0 8px 8px;display:flex;flex-direction:column;gap:4px">
+          <span class="sec" style="font-size:15px">Neu in der Werkstatt</span>
+          <h2 style="font-size:26px">{latest.data.title}</h2>
+          <p class="sec" style="font-size:16px">{latest.data.summary}</p>
+        </div>
+      </a>
+    )}
+  </section>
+
+  <section class="section" aria-labelledby="lb">
+    <h2 id="lb" class="h2" style="font-size:48px;margin-bottom:16px">Logbuch</h2>
+    <div class="log">
+      {byYear.map(([year, list]) => (
+        <>
+          <div class="year"><span>{year}</span></div>
+          <div class="entries">
+            {list.map((e) => (
+              <a href={e.href}>
+                {e.image && <img src={projectImage(e.image)} alt={e.alt ?? ''} width="520" height="292" loading="lazy" decoding="async" />}
+                <h3>{e.title}</h3>
+                <span class="sec">{e.text}</span>
+              </a>
+            ))}
+          </div>
+        </>
+      ))}
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,67 @@
+---
+import '@fontsource-variable/bricolage-grotesque';
+import '../styles/global.css';
+import site from '../data/site.json';
+import { url } from '../lib/url';
+
+interface Props {
+  title?: string;
+  description?: string;
+  current?: 'start' | 'elektronik' | 'logbuch';
+  bodyClass?: string;
+}
+
+const { title, description = site.description, current, bodyClass = '' } = Astro.props;
+const fullTitle = title ? `${title} – ${site.name}` : `${site.name} – Maker für 3D-Druck und Elektronik`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const nav = [
+  { id: 'start', label: 'Start', href: url('/') },
+  { id: 'elektronik', label: 'Elektronik', href: url('/elektronik/') },
+  { id: 'logbuch', label: 'Logbuch', href: url('/logbuch/') },
+];
+const year = new Date().getFullYear();
+---
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href={url('/brand/logo.svg')} />
+    <meta name="theme-color" content="#EEF0F2" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+  </head>
+  <body class={bodyClass} style={`--logo-mask: url('${url('/brand/logo-outline.svg')}')`}>
+    <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+    <div class="wrap">
+      <header class="nav">
+        <a class="brand" href={url('/')}><span class="lg" aria-hidden="true"></span>{site.name}</a>
+        <nav aria-label="Hauptnavigation">
+          <ul>
+            {nav.map((n) => (
+              <li><a href={n.href} aria-current={current === n.id ? 'page' : undefined}>{n.label}</a></li>
+            ))}
+          </ul>
+        </nav>
+      </header>
+      <main id="inhalt">
+        <slot />
+      </main>
+      <footer class="footer">
+        <span>© {year} {site.name}{site.email && <>, <a href={`mailto:${site.email}`}>{site.email}</a></>}</span>
+        <nav aria-label="Fußzeile">
+          <a href={site.links.printables}>Printables</a>
+          <a href={site.links.github}>GitHub</a>
+          <a href={site.links.youtube}>YouTube</a>
+          <a href={url('/impressum/')}>Impressum</a>
+          <a href={url('/datenschutz/')}>Datenschutz</a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+import stats from '../data/stats.json';
+import { getProjects } from '../lib/projects';
+import { url, projectImage, formatNumber } from '../lib/url';
+
+const projects = await getProjects();
+const years = new Date().getFullYear() - site.since;
+---
+<Base current="start">
+  <section class="hero">
+    <div class="bed" role="img" aria-label="Das Logo als frisch gedrucktes Teil auf einem Druckbett">
+      <div class="print"><span class="lg"></span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <h1>Vom Druckbett direkt in den Alltag</h1>
+      <p class="lead sec">Ich konstruiere, drucke und programmiere Werkzeuge und kleine Maschinen. Dateien und Code teile ich offen.</p>
+      <div class="actions">
+        <a class="btn btn-p" href="#projekte">Projekte ansehen</a>
+        <a class="btn btn-s" href={site.links.printables}>Printables</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="projekte" class="section">
+    <div class="section-head">
+      <h2 class="h2">Projekte</h2>
+      <a href={site.links.github} style="font-weight:500">Alle Repos auf GitHub</a>
+    </div>
+    <div class="rail" tabindex="0" aria-label="Projekte, seitlich scrollbar">
+      {projects.map((p) => (
+        <a href={url(`/projekte/${p.id}/`)}>
+          {p.data.image
+            ? <img class="ph" src={projectImage(p.data.image)} alt={p.data.imageAlt ?? ''} width="290" height="362" loading="lazy" decoding="async" />
+            : <div class="slot">Foto folgt</div>}
+          {p.data.status === 'in Arbeit' && <span class="tag">In Arbeit</span>}
+          <h3>{p.data.title}</h3>
+          <p class="sec">{p.data.summary}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section" aria-label="Weitere Seiten">
+    <div class="doors">
+      <a class="door pcb" href={url('/elektronik/')}>
+        <div class="pins" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div><h2>Elektronik</h2><p style="margin-top:6px">Alle Projekte nach Mikrocontroller sortiert, vom ESP32 bis zum Raspberry Pi.</p></div>
+      </a>
+      <a class="door book" href={url('/logbuch/')}>
+        <div><span class="yr">{site.since}</span><span class="yr">{new Date().getFullYear()}</span></div>
+        <div><h2>Logbuch</h2><p style="margin-top:6px">{years} Jahre Werkstatt, Jahr für Jahr aufgeschrieben.</p></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="h2" style="font-size:36px;margin-bottom:16px">Meistgeladen auf Printables</h2>
+    <ul class="top">
+      {stats.topModels.map((m) => (
+        <li><a href={m.url}><span>{m.title}</span><span class="sec num">{formatNumber(m.downloads)} Downloads</span></a></li>
+      ))}
+    </ul>
+    <p class="sec" style="margin-top:20px;font-size:15px">
+      <span class="num">{formatNumber(stats.printables.models)}</span> Modelle auf Printables,
+      <span class="num">{stats.github.repos}</span> Repos auf GitHub,
+      rund <span class="num">{stats.youtube.videos}</span> Videos auf YouTube.
+    </p>
+  </section>
+</Base>
