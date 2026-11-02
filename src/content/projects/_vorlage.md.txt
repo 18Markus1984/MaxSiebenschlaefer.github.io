@@ -9,6 +9,7 @@ image: dateiname.jpg        # liegt in public/images/projects/, weglassen = "Fot
 imageAlt: Was auf dem Foto zu sehen ist
 order: 1                    # Platz auf der Startseite, 1 = ganz vorne
 featured: false             # true = großer Kasten auf der Elektronik-Seite (nur ein Projekt)
+draft: false                # true = noch nicht veröffentlicht, wird ausgeblendet
 specs:
   - label: Steuerung
     value: ESP32

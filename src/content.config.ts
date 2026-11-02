@@ -19,6 +19,8 @@ const projects = defineCollection({
     // Reihenfolge auf der Startseite, kleinere Zahl = weiter vorne
     order: z.number().default(100),
     featured: z.boolean().default(false),
+    // draft: true = noch nicht veröffentlicht, erscheint nirgends auf der Seite
+    draft: z.boolean().default(false),
     specs: z.array(z.object({ label: z.string(), value: z.string() })).default([]),
     links: z
       .object({

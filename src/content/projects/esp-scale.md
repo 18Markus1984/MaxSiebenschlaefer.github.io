@@ -8,6 +8,7 @@ status: in Arbeit
 image: esp-scale.jpg
 imageAlt: Weiße Küchenwaage mit rundem Display, das 0,0 g zeigt
 order: 2
+featured: true
 specs:
   - label: Controller
     value: Waveshare ESP32-S3 mit 1,46-Zoll-Runddisplay

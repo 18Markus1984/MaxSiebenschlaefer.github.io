@@ -6,7 +6,7 @@ category: elektronik
 controller: ESP32
 status: in Arbeit
 order: 1
-featured: true
+draft: true
 specs:
   - label: Steuerung
     value: ESP32 mit CNC Shield V3
