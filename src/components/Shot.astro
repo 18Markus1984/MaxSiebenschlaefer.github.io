@@ -1,0 +1,43 @@
+---
+// Zeigt ein Bild in einem festen Seitenverhältnis, ohne dass etwas übersteht.
+// Passt das Bild ungefähr ins Format, wird es am Fokuspunkt beschnitten (cover).
+// Weicht es stark ab (z. B. Hochformat in einer 4:3-Box), wird es vollständig gezeigt (contain)
+// und der Rest der Fläche mit einer unscharfen Version desselben Bildes gefüllt.
+import { url } from '../lib/url';
+import type { Shot } from '../lib/projects';
+
+interface Props {
+  shot?: Shot;
+  ratio?: number;
+  width?: number;
+  eager?: boolean;
+  class?: string;
+  fallback?: string;
+  fit?: 'auto' | 'cover' | 'contain';
+}
+
+const { shot, ratio = 4 / 3, width = 600, eager = false, class: cls = '', fallback = 'Foto folgt', fit = 'auto' } = Astro.props;
+const height = Math.round(width / ratio);
+let mode: 'cover' | 'contain' = 'cover';
+if (shot) {
+  const ar = shot.w / shot.h;
+  // bis Faktor 1,34 (z. B. 1:1 oder 16:9 in 4:3) wird am Fokuspunkt beschnitten, darüber komplett gezeigt
+  mode = fit !== 'auto' ? fit : Math.abs(Math.log(ar / ratio)) <= Math.log(1.34) ? 'cover' : 'contain';
+}
+const src = shot ? url(shot.src) : '';
+---
+{shot ? (
+  <div class:list={['shot', `shot-${mode}`, cls]} style={`aspect-ratio:${ratio};--bgimg:url('${src}')`}>
+    <img
+      src={src}
+      alt={shot.alt ?? ''}
+      width={width}
+      height={height}
+      loading={eager ? 'eager' : 'lazy'}
+      decoding="async"
+      style={mode === 'cover' ? `object-position:${shot.fx}% ${shot.fy}%` : undefined}
+    />
+  </div>
+) : (
+  <div class:list={['shot', 'shot-empty', cls]} style={`aspect-ratio:${ratio}`}><span>{fallback}</span></div>
+)}

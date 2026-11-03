@@ -1,11 +1,12 @@
 ---
 import Base from '../layouts/Base.astro';
+import Shot from '../components/Shot.astro';
 import site from '../data/site.json';
-import { getProjects, groupByController } from '../lib/projects';
-import { url, projectImage } from '../lib/url';
+import { getProjects, groupByController, cover } from '../lib/projects';
+import { url } from '../lib/url';
 
 const projects = await getProjects();
-const groups = groupByController(projects);
+const groups = groupByController(projects.filter((p) => p.data.category === 'elektronik'));
 const featured = projects.find((p) => p.data.featured);
 ---
 <Base title="Elektronik" current="elektronik" description="Elektronik-Projekte von Max Siebenschläfer, sortiert nach Mikrocontroller.">
@@ -34,9 +35,7 @@ const featured = projects.find((p) => p.data.featured);
         <div class="cards">
           {list.map((p) => (
             <a class="card" href={url(`/projekte/${p.id}/`)}>
-              {p.data.image
-                ? <img src={projectImage(p.data.image)} alt="" width="132" height="100" loading="lazy" decoding="async" />
-                : <span class="mini-slot">Foto folgt</span>}
+              <Shot shot={cover(p)} ratio={4 / 3} width={132} />
               <div><h3>{p.data.title}</h3><span class="sec">{p.data.summary}</span></div>
             </a>
           ))}
@@ -48,9 +47,7 @@ const featured = projects.find((p) => p.data.featured);
   {featured && (
     <section id="aktuell" class="section">
       <div class="feat">
-        {featured.data.image
-          ? <img class="feat-img" src={projectImage(featured.data.image)} alt={featured.data.imageAlt ?? ''} width="600" height="450" loading="lazy" />
-          : <div class="feat-img">Foto folgt</div>}
+        <Shot shot={cover(featured)} ratio={4 / 3} width={600} class="feat-shot" />
         <div style="display:flex;flex-direction:column;gap:18px">
           <h2 class="h2">{featured.data.title}</h2>
           <p class="sec" style="font-size:18px">{featured.data.summary}</p>

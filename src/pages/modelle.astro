@@ -1,0 +1,59 @@
+---
+import Base from '../layouts/Base.astro';
+import Shot from '../components/Shot.astro';
+import site from '../data/site.json';
+import { getProjects, cover } from '../lib/projects';
+import { url, formatNumber } from '../lib/url';
+
+const all = (await getProjects()).sort((a, b) => (b.data.date ?? `${b.data.year}`).localeCompare(a.data.date ?? `${a.data.year}`));
+const groups = [...new Set(all.map((p) => p.data.group))]
+  .map((g) => [g, all.filter((p) => p.data.group === g).length] as const)
+  .sort((a, b) => b[1] - a[1]);
+const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9äöüß]+/g, '-');
+---
+<Base title="Modelle" current="modelle" description={`Alle ${all.length} Modelle von Max Siebenschläfer auf Printables, mit Bildern und Beschreibung.`}>
+  <section style="padding-top:40px;display:flex;flex-direction:column;gap:16px;max-width:760px">
+    <h1 style="font-size:60px;line-height:1.02">Alle {all.length} Modelle</h1>
+    <p class="sec" style="font-size:19px">Alles, was ich seit {site.since} auf Printables veröffentlicht habe, vom Kopfhörerhalter bis zum Roboterwerkzeug. Die Druckdateien gibt es jeweils kostenlos auf Printables.</p>
+  </section>
+
+  <section class="section" style="padding-top:40px">
+    <div class="filters" role="group" aria-label="Nach Rubrik filtern">
+      <button type="button" class="chip-btn" data-filter="alle" aria-pressed="true">Alle <span class="num">{all.length}</span></button>
+      {groups.map(([g, n]) => (
+        <button type="button" class="chip-btn" data-filter={slug(g)} aria-pressed="false">{g} <span class="num">{n}</span></button>
+      ))}
+    </div>
+    <p class="visually-hidden" aria-live="polite" id="filter-status"></p>
+    <ul class="archive" id="archive">
+      {all.map((p) => (
+        <li data-group={slug(p.data.group)}>
+          <a href={url(`/projekte/${p.id}/`)}>
+            <Shot shot={cover(p)} ratio={4 / 3} width={300} />
+            <h2>{p.data.title}</h2>
+            <span class="sec meta">{p.data.year}{p.data.downloads ? <> · <span class="num">{formatNumber(p.data.downloads)}</span> Downloads</> : null}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Base>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.chip-btn');
+  const items = document.querySelectorAll<HTMLLIElement>('#archive li');
+  const status = document.getElementById('filter-status');
+  buttons.forEach((b) =>
+    b.addEventListener('click', () => {
+      const f = b.dataset.filter;
+      buttons.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      let n = 0;
+      items.forEach((li) => {
+        const show = f === 'alle' || li.dataset.group === f;
+        li.hidden = !show;
+        if (show) n++;
+      });
+      if (status) status.textContent = `${n} Modelle angezeigt`;
+    }),
+  );
+</script>

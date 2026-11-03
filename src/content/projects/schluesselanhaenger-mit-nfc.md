@@ -1,0 +1,18 @@
+---
+title: "Schlüsselanhänger mit NFC"
+year: 2021
+date: 2021-12-27
+summary: "Geburtstagsgeschenk mit Farbwechsel mitten im Druck."
+category: druck
+group: "Kunst und Design"
+printablesId: "101994"
+downloads: 38
+likes: 4
+gallery:
+  - { src: /images/printables/101994/0.jpg, w: 720, h: 598, fx: 50, fy: 45 }
+  - { src: /images/printables/101994/1.jpg, w: 720, h: 720, fx: 50, fy: 34 }
+links:
+  printables: https://www.printables.com/model/101994-keychain-with-nfc
+---
+
+Im Anhänger steckt ein NFC-Chip, bei mir mit Notfallinformationen. Durch einen Filamentwechsel während des Drucks wird er zweifarbig.

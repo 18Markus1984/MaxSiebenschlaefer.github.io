@@ -1,11 +1,14 @@
 ---
 import Base from '../layouts/Base.astro';
+import Shot from '../components/Shot.astro';
 import site from '../data/site.json';
 import stats from '../data/stats.json';
-import { getProjects } from '../lib/projects';
-import { url, projectImage, formatNumber } from '../lib/url';
+import { getProjects, isHighlight, cover } from '../lib/projects';
+import { url, formatNumber } from '../lib/url';
 
-const projects = await getProjects();
+const all = await getProjects();
+const highlights = all.filter(isHighlight);
+const top = [...all].filter((p) => p.data.downloads).sort((a, b) => (b.data.downloads ?? 0) - (a.data.downloads ?? 0)).slice(0, 4);
 const years = new Date().getFullYear() - site.since;
 ---
 <Base current="start">
@@ -18,7 +21,7 @@ const years = new Date().getFullYear() - site.since;
       <p class="lead sec">Ich konstruiere, drucke und programmiere Werkzeuge und kleine Maschinen. Dateien und Code teile ich offen.</p>
       <div class="actions">
         <a class="btn btn-p" href="#projekte">Projekte ansehen</a>
-        <a class="btn btn-s" href={site.links.printables}>Printables</a>
+        <a class="btn btn-s" href={url('/modelle/')}>Alle {all.length} Modelle</a>
       </div>
     </div>
   </section>
@@ -26,14 +29,12 @@ const years = new Date().getFullYear() - site.since;
   <section id="projekte" class="section">
     <div class="section-head">
       <h2 class="h2">Projekte</h2>
-      <a href={site.links.github} style="font-weight:500">Alle Repos auf GitHub</a>
+      <a href={url('/modelle/')} style="font-weight:500">Alle Modelle ansehen</a>
     </div>
     <div class="rail" tabindex="0" aria-label="Projekte, seitlich scrollbar">
-      {projects.map((p) => (
+      {highlights.map((p, i) => (
         <a href={url(`/projekte/${p.id}/`)}>
-          {p.data.image
-            ? <img class="ph" src={projectImage(p.data.image)} alt={p.data.imageAlt ?? ''} width="290" height="362" loading="lazy" decoding="async" />
-            : <div class="slot">Foto folgt</div>}
+          <Shot shot={cover(p)} ratio={4 / 3} width={290} eager={i < 3} />
           {p.data.status === 'in Arbeit' && <span class="tag">In Arbeit</span>}
           <h3>{p.data.title}</h3>
           <p class="sec">{p.data.summary}</p>
@@ -43,10 +44,14 @@ const years = new Date().getFullYear() - site.since;
   </section>
 
   <section class="section" aria-label="Weitere Seiten">
-    <div class="doors">
+    <div class="doors three">
       <a class="door pcb" href={url('/elektronik/')}>
         <div class="pins" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
         <div><h2>Elektronik</h2><p style="margin-top:6px">Alle Projekte nach Mikrocontroller sortiert, vom ESP32 bis zum Raspberry Pi.</p></div>
+      </a>
+      <a class="door filament" href={url('/modelle/')}>
+        <div class="spools" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div><h2>Modelle</h2><p style="margin-top:6px">Alle {all.length} Modelle von Printables mit Bildern und Beschreibung.</p></div>
       </a>
       <a class="door book" href={url('/logbuch/')}>
         <div><span class="yr">{site.since}</span><span class="yr">{new Date().getFullYear()}</span></div>
@@ -56,15 +61,19 @@ const years = new Date().getFullYear() - site.since;
   </section>
 
   <section class="section">
-    <h2 class="h2" style="font-size:36px;margin-bottom:16px">Meistgeladen auf Printables</h2>
-    <ul class="top">
-      {stats.topModels.map((m) => (
-        <li><a href={m.url}><span>{m.title}</span><span class="sec num">{formatNumber(m.downloads)} Downloads</span></a></li>
+    <h2 class="h2" style="font-size:36px;margin-bottom:24px">Meistgeladen auf Printables</h2>
+    <div class="top-grid">
+      {top.map((p) => (
+        <a class="tile" href={url(`/projekte/${p.id}/`)}>
+          <Shot shot={cover(p)} ratio={4 / 3} width={300} />
+          <h3>{p.data.title}</h3>
+          <span class="sec num">{formatNumber(p.data.downloads ?? 0)} Downloads</span>
+        </a>
       ))}
-    </ul>
-    <p class="sec" style="margin-top:20px;font-size:15px">
-      <span class="num">{formatNumber(stats.printables.models)}</span> Modelle auf Printables,
-      <span class="num">{stats.github.repos}</span> Repos auf GitHub,
+    </div>
+    <p class="sec" style="margin-top:24px;font-size:15px">
+      <span class="num">{formatNumber(stats.printables.models)}</span> Modelle auf Printables,{' '}
+      <span class="num">{stats.github.repos}</span> Repos auf GitHub,{' '}
       rund <span class="num">{stats.youtube.videos}</span> Videos auf YouTube.
     </p>
   </section>

@@ -1,45 +1,51 @@
 ---
 import Base from '../layouts/Base.astro';
+import Shot from '../components/Shot.astro';
 import site from '../data/site.json';
 import extra from '../data/logbuch.json';
-import { getProjects } from '../lib/projects';
-import { url, projectImage } from '../lib/url';
+import { getProjects, isHighlight, cover } from '../lib/projects';
+import { url } from '../lib/url';
 
 const projects = await getProjects();
 const years = new Date().getFullYear() - site.since;
+const printablesIds = new Set(projects.map((p) => p.data.links.printables).filter(Boolean));
 
-
-type Entry = { year: number; title: string; text: string; href: string; image?: string; alt?: string; external: boolean };
+type Entry = { year: number; date: string; title: string; text: string; href: string; project?: (typeof projects)[number]; highlight: boolean };
 const entries: Entry[] = [
   ...projects.map((p) => ({
     year: p.data.year,
+    date: p.data.date ?? `${p.data.year}-12-31`,
     title: p.data.title,
     text: p.data.summary,
     href: url(`/projekte/${p.id}/`),
-    image: p.data.image,
-    alt: p.data.imageAlt,
-    external: false,
+    project: p,
+    highlight: isHighlight(p),
   })),
-  ...extra.map((e) => ({ year: e.year, title: e.title, text: e.text, href: e.url, external: true })),
+  // Zusätzliche Einträge ohne eigenes Projekt (z. B. die ersten Videos), sofern nicht schon als Modell vorhanden
+  ...extra
+    .filter((e) => ![...printablesIds].some((u) => u && e.url.includes(u.split('/model/')[1]?.split('-')[0] ?? '###')))
+    .map((e) => ({ year: e.year, date: `${e.year}-01-01`, title: e.title, text: e.text, href: e.url, highlight: false })),
 ];
 const byYear = [...new Set(entries.map((e) => e.year))]
   .sort((a, b) => b - a)
-  .map((y) => [y, entries.filter((e) => e.year === y)] as const);
+  .map((y) => [y, entries.filter((e) => e.year === y).sort((a, b) => Number(b.highlight) - Number(a.highlight) || b.date.localeCompare(a.date))] as const);
 
-// Neuestes Projekt mit Foto oben rechts
-const latest = projects.filter((p) => p.data.image).sort((a, b) => b.data.year - a.data.year || a.data.order - b.data.order)[0];
+const latest = [...projects].filter((p) => cover(p)).sort((a, b) => (b.data.date ?? '').localeCompare(a.data.date ?? ''))[0];
 ---
 <Base title="Logbuch" current="logbuch" bodyClass="dots" description={`${years} Jahre Werkstatt von Max Siebenschläfer, Jahr für Jahr.`}>
   <section class="hero" style="padding-top:48px">
     <div style="display:flex;flex-direction:column;gap:22px">
       <h1 style="font-size:64px;line-height:1.02">{years} Jahre Werkstatt in einem Logbuch</h1>
-      <p class="lead sec">Seit {site.since} drucke, löte und programmiere ich. Hier steht, was dabei entstanden ist, Jahr für Jahr.</p>
+      <p class="lead sec">Seit {site.since} drucke, löte und programmiere ich. Hier steht alles, was dabei entstanden ist, Jahr für Jahr.</p>
+      <nav aria-label="Jahre" class="year-jump">
+        {byYear.map(([y]) => <a href={`#j${y}`}>{y}</a>)}
+      </nav>
     </div>
     {latest && (
       <a class="bench" href={url(`/projekte/${latest.id}/`)}>
-        <img src={projectImage(latest.data.image)} alt={latest.data.imageAlt ?? ''} width="520" height="390" />
+        <Shot shot={cover(latest)} ratio={4 / 3} width={520} eager />
         <div style="padding:0 8px 8px;display:flex;flex-direction:column;gap:4px">
-          <span class="sec" style="font-size:15px">Neu in der Werkstatt</span>
+          <span class="sec" style="font-size:15px">Zuletzt veröffentlicht</span>
           <h2 style="font-size:26px">{latest.data.title}</h2>
           <p class="sec" style="font-size:16px">{latest.data.summary}</p>
         </div>
@@ -52,15 +58,27 @@ const latest = projects.filter((p) => p.data.image).sort((a, b) => b.data.year -
     <div class="log">
       {byYear.map(([year, list]) => (
         <>
-          <div class="year"><span>{year}</span></div>
+          <div class="year" id={`j${year}`}><span>{year}</span><small class="sec">{list.length} Einträge</small></div>
           <div class="entries">
-            {list.map((e) => (
-              <a href={e.href}>
-                {e.image && <img src={projectImage(e.image)} alt={e.alt ?? ''} width="520" height="292" loading="lazy" decoding="async" />}
+            {list.filter((e) => e.highlight).map((e) => (
+              <a href={e.href} class="big">
+                {e.project && <Shot shot={cover(e.project)} ratio={16 / 9} width={520} />}
                 <h3>{e.title}</h3>
                 <span class="sec">{e.text}</span>
               </a>
             ))}
+            {list.some((e) => !e.highlight) && (
+              <ul class="mini-list">
+                {list.filter((e) => !e.highlight).map((e) => (
+                  <li>
+                    <a href={e.href}>
+                      {e.project ? <Shot shot={cover(e.project)} ratio={1} width={64} fit="cover" /> : <span class="mini-dot" aria-hidden="true"></span>}
+                      <span><strong>{e.title}</strong><span class="sec">{e.text}</span></span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </>
       ))}

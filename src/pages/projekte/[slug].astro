@@ -1,8 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Shot from '../../components/Shot.astro';
 import { render } from 'astro:content';
-import { getProjects, type Project } from '../../lib/projects';
-import { url, projectImage } from '../../lib/url';
+import { getProjects, shots, type Project } from '../../lib/projects';
+import { url, formatNumber } from '../../lib/url';
 
 export async function getStaticPaths() {
   const projects = await getProjects();
@@ -12,30 +13,34 @@ export async function getStaticPaths() {
 const { project } = Astro.props as { project: Project };
 const { Content } = await render(project);
 const d = project.data;
+const imgs = shots(project);
 const links = [
-  d.links.github && { label: 'Code auf GitHub', href: d.links.github },
   d.links.printables && { label: 'Druckdateien auf Printables', href: d.links.printables },
+  d.links.github && { label: 'Code auf GitHub', href: d.links.github },
   d.links.youtube && { label: 'Video auf YouTube', href: d.links.youtube },
 ].filter(Boolean) as { label: string; href: string }[];
-const back = d.category === 'elektronik' ? { href: url('/elektronik/'), label: 'Alle Elektronik-Projekte' } : { href: url('/'), label: 'Alle Projekte' };
+const back = d.category === 'elektronik' ? { href: url('/elektronik/'), label: 'Alle Elektronik-Projekte' } : { href: url('/modelle/'), label: 'Alle Modelle' };
+const dateText = d.date ? new Intl.DateTimeFormat('de-DE', { month: 'long', year: 'numeric' }).format(new Date(d.date)) : String(d.year);
+const meta = [d.controller, dateText, d.status === 'in Arbeit' ? 'in Arbeit' : null, d.group].filter(Boolean).join(' · ');
 ---
-<Base title={d.title} description={d.summary} current={d.category === 'elektronik' ? 'elektronik' : 'start'}>
+<Base title={d.title} description={d.summary} current={d.category === 'elektronik' ? 'elektronik' : 'modelle'}>
   <article>
     <p style="margin-top:16px"><a href={back.href} class="sec">{back.label}</a></p>
     <div class="project-hero">
       <div style="display:flex;flex-direction:column;gap:18px">
-        <p class="sec" style="font-size:15px">{[d.controller, d.year, d.status === 'in Arbeit' ? 'in Arbeit' : null].filter(Boolean).join(', ')}</p>
+        <p class="sec" style="font-size:15px">{meta}</p>
         <h1>{d.title}</h1>
         <p class="sec" style="font-size:19px;max-width:40ch">{d.summary}</p>
+        {(d.downloads != null || d.likes != null) && (
+          <p class="stats-line"><span><b class="num">{formatNumber(d.downloads ?? 0)}</b> Downloads</span><span><b class="num">{formatNumber(d.likes ?? 0)}</b> Likes</span></p>
+        )}
         {links.length > 0 && (
           <div class="actions">
             {links.map((l, i) => <a class={`btn ${i === 0 ? 'btn-p' : 'btn-s'}`} href={l.href}>{l.label}</a>)}
           </div>
         )}
       </div>
-      {d.image
-        ? <img class="feat-img" src={projectImage(d.image)} alt={d.imageAlt ?? ''} width="600" height="450" />
-        : <div class="feat-img">Foto folgt</div>}
+      <Shot shot={imgs[0]} ratio={4 / 3} width={600} eager class="hero-shot" />
     </div>
     <div class="section" style="display:grid;gap:40px">
       <div class="prose"><Content /></div>
@@ -43,6 +48,16 @@ const back = d.category === 'elektronik' ? { href: url('/elektronik/'), label: '
         <div class="spec" style="max-width:760px">
           {d.specs.map((s) => <div><b>{s.label}</b>{s.value}</div>)}
         </div>
+      )}
+      {imgs.length > 1 && (
+        <section aria-label="Weitere Bilder">
+          <h2 style="font-size:28px;margin-bottom:16px">Bilder</h2>
+          <ul class="gallery">
+            {imgs.slice(1).map((s) => (
+              <li><a href={url(s.src)}><Shot shot={s} ratio={4 / 3} width={400} /></a></li>
+            ))}
+          </ul>
+        </section>
       )}
     </div>
   </article>

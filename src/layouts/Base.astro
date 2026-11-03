@@ -7,7 +7,7 @@ import { url } from '../lib/url';
 interface Props {
   title?: string;
   description?: string;
-  current?: 'start' | 'elektronik' | 'logbuch';
+  current?: 'start' | 'elektronik' | 'modelle' | 'logbuch';
   bodyClass?: string;
 }
 
@@ -17,6 +17,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 const nav = [
   { id: 'start', label: 'Start', href: url('/') },
   { id: 'elektronik', label: 'Elektronik', href: url('/elektronik/') },
+  { id: 'modelle', label: 'Modelle', href: url('/modelle/') },
   { id: 'logbuch', label: 'Logbuch', href: url('/logbuch/') },
 ];
 const year = new Date().getFullYear();
