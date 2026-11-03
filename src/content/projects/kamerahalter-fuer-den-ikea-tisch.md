@@ -3,7 +3,8 @@ title: "Kamerahalter für den IKEA-Tisch"
 year: 2021
 date: 2021-12-27
 summary: "Halter für eine Raspberry-Pi-Kamera an der Druckereinhausung."
-category: druck
+category: elektronik
+controller: "Raspberry Pi"
 group: "3D-Drucker"
 printablesId: "102100"
 downloads: 21

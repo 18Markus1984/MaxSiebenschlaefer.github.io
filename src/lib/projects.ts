@@ -31,7 +31,7 @@ export function shots(p: Project): Shot[] {
 }
 
 // Reihenfolge der Mikrocontroller auf der Elektronik-Seite. Unbekannte landen am Ende.
-const CONTROLLER_ORDER = ['ESP32', 'ESP32-S3', 'ESP32-S2', 'ESP32-C3', 'ESP8266', 'Arduino Pro Micro', 'Arduino Nano', 'Arduino', 'Raspberry Pi'];
+const CONTROLLER_ORDER = ['ESP32', 'ESP32-S3', 'ESP32-S2', 'ESP32-C3', 'ESP8266', 'Arduino Pro Micro', 'Arduino Nano', 'Arduino', 'Raspberry Pi', 'Nvidia Jetson', 'NFC'];
 
 export function groupByController(projects: Project[]): [string, Project[]][] {
   const groups = new Map<string, Project[]>();

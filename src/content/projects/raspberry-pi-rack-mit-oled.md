@@ -3,7 +3,8 @@ title: "Raspberry-Pi-Rack mit OLED"
 year: 2022
 date: 2022-02-23
 summary: "Rackeinschub für den Raspberry Pi mit kleinem 0,96-Zoll-Display."
-category: druck
+category: elektronik
+controller: "Raspberry Pi"
 group: "Hobby & Handwerker"
 printablesId: "138460"
 downloads: 40

@@ -4,6 +4,7 @@ year: 2024
 date: 2024-07-26
 summary: "Kühler, der ein Getränk in zwei bis drei Minuten auf Temperatur bringt."
 category: elektronik
+controller: "Arduino Nano"
 group: "Hobby & Handwerker"
 printablesId: "953873"
 downloads: 31

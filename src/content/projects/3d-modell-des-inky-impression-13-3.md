@@ -3,7 +3,8 @@ title: "3D-Modell des Inky Impression 13,3\""
 year: 2026
 date: 2026-05-18
 summary: "3D-Modell des 13,3-Zoll-E-Paper-Displays als 3MF, F3D und STEP."
-category: druck
+category: elektronik
+controller: "Raspberry Pi"
 group: "Hobby & Handwerker"
 printablesId: "1725075"
 downloads: 5

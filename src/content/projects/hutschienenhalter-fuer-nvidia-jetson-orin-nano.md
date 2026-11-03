@@ -3,7 +3,8 @@ title: "Hutschienenhalter für Nvidia Jetson Orin Nano"
 year: 2023
 date: 2023-12-09
 summary: "Halter, um einen Jetson Orin Nano auf eine Hutschiene zu klemmen."
-category: druck
+category: elektronik
+controller: "Nvidia Jetson"
 group: "Hobby & Handwerker"
 printablesId: "674734"
 downloads: 285

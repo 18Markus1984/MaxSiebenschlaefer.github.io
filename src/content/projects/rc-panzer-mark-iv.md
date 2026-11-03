@@ -3,7 +3,8 @@ title: "RC-Panzer Mark IV"
 year: 2022
 date: 2022-04-26
 summary: "Ferngesteuerter Nachbau des britischen Mark-IV-Panzers."
-category: druck
+category: elektronik
+controller: "Arduino Nano"
 group: "Hobby & Handwerker"
 printablesId: "102051"
 downloads: 136

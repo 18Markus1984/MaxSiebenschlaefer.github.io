@@ -3,7 +3,8 @@ title: "Itachi-Schlüsselanhänger mit NFC"
 year: 2022
 date: 2022-03-08
 summary: "Anhänger mit Itachis Symbol und Platz für einen NFC-Chip."
-category: druck
+category: elektronik
+controller: "NFC"
 group: "Kunst und Design"
 printablesId: "143940"
 downloads: 216

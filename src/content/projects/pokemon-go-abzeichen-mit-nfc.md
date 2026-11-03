@@ -3,7 +3,8 @@ title: "Pokémon-Go-Abzeichen mit NFC"
 year: 2021
 date: 2021-12-22
 summary: "Hält man den Anhänger ans Handy, startet Pokémon Go."
-category: druck
+category: elektronik
+controller: "NFC"
 group: "Gadgets"
 printablesId: "101350"
 downloads: 36

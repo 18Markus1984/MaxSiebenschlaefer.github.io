@@ -3,7 +3,8 @@ title: "Schlüsselanhänger mit NFC"
 year: 2021
 date: 2021-12-27
 summary: "Geburtstagsgeschenk mit Farbwechsel mitten im Druck."
-category: druck
+category: elektronik
+controller: "NFC"
 group: "Kunst und Design"
 printablesId: "101994"
 downloads: 38

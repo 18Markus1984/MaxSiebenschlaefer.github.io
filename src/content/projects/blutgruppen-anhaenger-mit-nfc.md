@@ -3,7 +3,8 @@ title: "Blutgruppen-Anhänger mit NFC"
 year: 2022
 date: 2022-03-11
 summary: "Schlüsselanhänger mit Blutgruppe und Notfalldaten auf einem NFC-Chip."
-category: druck
+category: elektronik
+controller: "NFC"
 group: "Gadgets"
 printablesId: "143970"
 downloads: 289

@@ -3,7 +3,7 @@ title: "Thermometergehäuse"
 year: 2022
 date: 2022-02-23
 summary: "Gehäuse für einen üblichen Temperatursensor."
-category: druck
+category: elektronik
 group: "3D-Drucker"
 printablesId: "138459"
 downloads: 71

@@ -3,7 +3,8 @@ title: "Halter für Wemos S2 Mini"
 year: 2024
 date: 2024-12-26
 summary: "Halter, der das Board sichert und 6,5 mm anhebt."
-category: druck
+category: elektronik
+controller: "ESP32-S2"
 group: "Hobby & Handwerker"
 printablesId: "1121556"
 downloads: 67

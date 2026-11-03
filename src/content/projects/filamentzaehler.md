@@ -4,6 +4,7 @@ year: 2026
 date: 2026-04-23
 summary: "Optischer Encoder, der die verbrauchte Filamentlänge misst."
 category: elektronik
+controller: "Arduino"
 group: "3D-Drucker"
 printablesId: "1565648"
 downloads: 16
