@@ -14,6 +14,8 @@ gallery:
   - { src: /images/printables/138459/2.jpg, w: 1024, h: 576, fx: 51, fy: 50 }
 links:
   printables: https://www.printables.com/model/138459-case-thermometer
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:4337406" }
 ---
 
 Ein kleines Gehäuse, das den Sensor schützt.

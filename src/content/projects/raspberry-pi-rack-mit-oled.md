@@ -13,6 +13,8 @@ gallery:
   - { src: /images/printables/138460/0.jpg, w: 1024, h: 576, fx: 50, fy: 49 }
 links:
   printables: https://www.printables.com/model/138460-raspberry-pi-rack-with-096-oled
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:4458147" }
 ---
 
 Weil das Display höher ist als der Einschub, habe ich es schräg eingebaut. Pro Rack passt nur ein Display, sonst sieht man es nicht mehr.

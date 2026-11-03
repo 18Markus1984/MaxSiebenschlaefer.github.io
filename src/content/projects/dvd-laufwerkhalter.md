@@ -12,6 +12,8 @@ gallery:
   - { src: /images/printables/102086/0.jpg, w: 695, h: 482, fx: 50, fy: 50 }
 links:
   printables: https://www.printables.com/model/102086-dvd-player-organizer
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:4337126" }
 ---
 
 Zwei kleine Halter, einer davon gespiegelt gedruckt, fixieren das externe Laufwerk auf dem Gehäuse.

@@ -16,6 +16,9 @@ gallery:
   - { src: /images/printables/101951/3.jpg, w: 720, h: 720, fx: 50, fy: 50 }
 links:
   printables: https://www.printables.com/model/101951-motioncontroller-glove
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:4821552" }
+  - { label: "Auf MyMiniFactory", url: "https://www.myminifactory.com/object/3d-print-motioncontroller-glove-165074" }
 ---
 
 Für ein Schulprojekt gebaut: Der Handschuh misst Achswinkel und Fingerbewegungen und schickt die Daten an ein eigenes Programm, das die Hand in Echtzeit darstellt.

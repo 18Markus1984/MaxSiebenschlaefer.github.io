@@ -13,6 +13,8 @@ gallery:
   - { src: /images/printables/101946/1.jpg, w: 720, h: 720, fx: 51, fy: 50 }
 links:
   printables: https://www.printables.com/model/101946-9v-blockswitch
+extraLinks:
+  - { label: "Auf MyMiniFactory", url: "https://www.myminifactory.com/object/3d-print-9v-blockswitch-146982" }
 ---
 
 Ich brauchte es für ein leuchtendes Iron-Man-Arc-Reactor-Projekt. Batterie rein, Schalter drauf, fertig.

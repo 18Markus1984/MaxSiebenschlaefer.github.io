@@ -28,6 +28,8 @@ gallery:
   - { src: /images/printables/154855/8.jpg, w: 1200, h: 586, fx: 50, fy: 50 }
   - { src: /images/printables/154855/9.jpg, w: 1200, h: 586, fx: 50, fy: 50 }
   - { src: /images/printables/154855/10.jpg, w: 1200, h: 585, fx: 50, fy: 50 }
+extraLinks:
+  - { label: "Auf MyMiniFactory", url: "https://www.myminifactory.com/object/3d-print-volume-knob-v2-usb-c-309337" }
 ---
 
 Drehen ändert die Lautstärke, Drücken schaltet stumm. Die zweite Version hat USB-C und ein überarbeitetes Gehäuse.

@@ -19,6 +19,9 @@ gallery:
   - { src: /images/printables/100913/7.jpg, w: 620, h: 403, fx: 48, fy: 50 }
 links:
   printables: https://www.printables.com/model/100913-easy-led-strip-holder
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:4682517" }
+  - { label: "Auf MyMiniFactory", url: "https://www.myminifactory.com/object/3d-print-easy-led-strip-holder-145197" }
 ---
 
 Dem Klebeband auf der Rückseite von LED-Streifen traue ich nicht, also habe ich für meinen 3D-Drucker diesen kleinen Clip konstruiert. Er druckt schnell und hält den Streifen zuverlässig in Position.

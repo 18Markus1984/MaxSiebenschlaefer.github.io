@@ -14,6 +14,8 @@ gallery:
   - { src: /images/printables/102064/2.jpg, w: 1200, h: 675, fx: 50, fy: 50 }
 links:
   printables: https://www.printables.com/model/102064-little-button-box-wifi
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:3720510" }
 ---
 
 Lackiert und bis Körnung 5000 geschliffen. Der Plan: Knopf drücken, und der WLAN-Controller bestellt Pizza oder Sushi. Am Code arbeite ich noch.

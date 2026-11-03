@@ -16,6 +16,8 @@ gallery:
   - { src: /images/printables/138467/4.jpg, w: 800, h: 600, fx: 50, fy: 68 }
 links:
   printables: https://www.printables.com/model/138467-anycubic-i3-mega-battery-holder
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:2907586" }
 ---
 
 Wer eine Lampe am Drucker möchte, aber nicht am Netzteil arbeiten will, steckt einfach Batterien in diesen Halter.

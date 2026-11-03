@@ -12,6 +12,8 @@ gallery:
   - { src: /images/printables/138465/0.jpg, w: 800, h: 600, fx: 46, fy: 67 }
 links:
   printables: https://www.printables.com/model/138465-iron-man-3
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:2911522" }
 ---
 
 Ein weiteres mehrfarbiges 2D-Druckbild.

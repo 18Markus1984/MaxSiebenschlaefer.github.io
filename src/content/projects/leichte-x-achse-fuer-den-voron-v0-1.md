@@ -19,6 +19,8 @@ gallery:
   - { src: /images/printables/323916/7.jpg, w: 1024, h: 768, fx: 50, fy: 55 }
 links:
   printables: https://www.printables.com/model/323916-custom-voron-v01-light-x-axis
+extraLinks:
+  - { label: "Anleitung auf Instructables", url: "https://www.instructables.com/Voron-V0-CNC-Milled-X-Axis/" }
 ---
 
 Inspiriert von Premiumbasics' ultraleichter Achse wollte ich ausprobieren, was ich selbst schaffe. Konstruiert in Fusion 360, mit FEM-Analyse und gefräst auf einer CNC-Maschine.

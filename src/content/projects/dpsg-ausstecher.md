@@ -13,6 +13,8 @@ gallery:
   - { src: /images/printables/102038/1.jpg, w: 900, h: 1200, fx: 50, fy: 50 }
 links:
   printables: https://www.printables.com/model/102038-dpsg-cookie-cutter
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:5171445" }
 ---
 
 Ein Keksausstecher mit dem Lilienlogo der Pfadfinder, entstanden für unseren Stamm.

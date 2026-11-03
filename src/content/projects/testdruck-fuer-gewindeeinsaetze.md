@@ -12,6 +12,8 @@ gallery:
   - { src: /images/printables/138462/0.jpg, w: 1024, h: 1024, fx: 49, fy: 39 }
 links:
   printables: https://www.printables.com/model/138462-insert-nut-testprint
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:3927907" }
 ---
 
 Die Reihen haben 4,95, 4,80 und 4,70 mm Durchmesser. So findet man schnell die passende Lochgröße für die eigenen Einsätze.

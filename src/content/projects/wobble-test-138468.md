@@ -13,6 +13,8 @@ gallery:
   - { src: /images/printables/138468/1.jpg, w: 800, h: 600, fx: 50, fy: 58 }
 links:
   printables: https://www.printables.com/model/138468-wobbeling-test
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:2885063" }
 ---
 
 Ein Turm, an dem sich Z-Wobble gut erkennen lässt.

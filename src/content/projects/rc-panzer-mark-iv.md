@@ -17,7 +17,11 @@ gallery:
   - { src: /images/printables/102051/4.jpg, w: 1200, h: 900, fx: 50, fy: 50 }
   - { src: /images/printables/102051/5.jpg, w: 1200, h: 900, fx: 50, fy: 50 }
 links:
+  youtube: https://youtu.be/RfXUVzcalYg
   printables: https://www.printables.com/model/102051-rc-mark-iv-tank
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:3176053" }
+  - { label: "Anleitung auf Instructables", url: "https://www.instructables.com/WiFi-Controlled-Mark-IV-Tank-3D-Printed/" }
 ---
 
 Ein halbes Jahr habe ich an diesem Roboter gearbeitet, mein erstes großes Design überhaupt. Gebaut habe ich ihn für einen Wissenschaftswettbewerb, mit vielen Rückschlägen bis zum fertigen Modell.

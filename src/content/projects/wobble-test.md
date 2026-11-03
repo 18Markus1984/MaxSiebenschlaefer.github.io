@@ -12,6 +12,8 @@ gallery:
   - { src: /images/printables/102081/0.jpg, w: 689, h: 483, fx: 50, fy: 54 }
 links:
   printables: https://www.printables.com/model/102081-wobbeling-test
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:2887831" }
 ---
 
 Ein Testdruck, um Wackeln der Z-Achse sichtbar zu machen. Nichts Besonderes, aber nützlich beim Einstellen.

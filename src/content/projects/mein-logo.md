@@ -12,6 +12,9 @@ gallery:
   - { src: /images/printables/101957/0.jpg, w: 653, h: 688, fx: 50, fy: 50 }
 links:
   printables: https://www.printables.com/model/101957-my-logo
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:4821267" }
+  - { label: "Auf MyMiniFactory", url: "https://www.myminifactory.com/object/3d-print-my-logo-165036" }
 ---
 
 Das Max-Siebenschläfer-Logo zum Aufhängen an der Wand.

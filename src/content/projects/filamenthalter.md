@@ -14,6 +14,9 @@ gallery:
   - { src: /images/printables/100944/2.jpg, w: 615, h: 425, fx: 55, fy: 48 }
 links:
   printables: https://www.printables.com/model/100944-filamentholder
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:2885081" }
+  - { label: "Auf MyMiniFactory", url: "https://www.myminifactory.com/object/3d-print-filamentholder-70062" }
 ---
 
 Mein allererstes Design: Halter, die ein 24-mm-Rohr tragen, auf dem sich viele Rollen aufreihen lassen. Das Rohr schneidet man einfach auf die gewünschte Länge.

@@ -18,6 +18,10 @@ gallery:
   - { src: /images/printables/101336/5.jpg, w: 675, h: 1200, fx: 50, fy: 50 }
 links:
   printables: https://www.printables.com/model/101336-5-axis-robot-arm
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:4821565" }
+  - { label: "Auf MyMiniFactory", url: "https://www.myminifactory.com/object/3d-print-5-axis-robot-arm-165085" }
+  - { label: "Anleitung auf Instructables", url: "https://www.instructables.com/Robotarm/" }
 ---
 
 Sechs Servos bewegen den gedruckten Arm. Gesteuert wird er über einen Handschuh, der die Handbewegungen erfasst und per WLAN an den Raspberry Pi schickt, der sie in Echtzeit nachfährt.

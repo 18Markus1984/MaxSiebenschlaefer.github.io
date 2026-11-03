@@ -18,6 +18,7 @@ const links = [
   d.links.printables && { label: 'Druckdateien auf Printables', href: d.links.printables },
   d.links.github && { label: 'Code auf GitHub', href: d.links.github },
   d.links.youtube && { label: 'Video auf YouTube', href: d.links.youtube },
+  ...d.extraLinks.map((l) => ({ label: l.label, href: l.url })),
 ].filter(Boolean) as { label: string; href: string }[];
 const back = d.category === 'elektronik' ? { href: url('/elektronik/'), label: 'Alle Elektronik-Projekte' } : { href: url('/modelle/'), label: 'Alle Modelle' };
 const dateText = d.date ? new Intl.DateTimeFormat('de-DE', { month: 'long', year: 'numeric' }).format(new Date(d.date)) : String(d.year);

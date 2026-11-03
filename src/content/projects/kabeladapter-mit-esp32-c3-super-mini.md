@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Kabeladapter mit ESP32-C3 Super Mini"
 year: 2025
 date: 2025-06-12

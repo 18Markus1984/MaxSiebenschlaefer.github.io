@@ -15,6 +15,9 @@ gallery:
   - { src: /images/printables/101958/3.jpg, w: 720, h: 720, fx: 49, fy: 50 }
 links:
   printables: https://www.printables.com/model/101958-ikea-trofast-3d-printing-accessorie-holder
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:4821177" }
+  - { label: "Auf MyMiniFactory", url: "https://www.myminifactory.com/object/3d-print-trofast-3d-printing-accessorie-holder-165021" }
 ---
 
 Ein Einsatz mit festen Plätzen für Klebestift, Düsenreiniger, Fett, Ersatzdüsen und Bowdenkupplungen. Alles hat seinen Platz in der Box.

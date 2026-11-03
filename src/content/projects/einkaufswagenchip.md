@@ -13,6 +13,9 @@ gallery:
   - { src: /images/printables/101915/1.jpg, w: 720, h: 720, fx: 49, fy: 50 }
 links:
   printables: https://www.printables.com/model/101915-shopping-cart-coin
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:3923241" }
+  - { label: "Auf MyMiniFactory", url: "https://www.myminifactory.com/object/3d-print-shopping-cart-coin-103329" }
 ---
 
 Ein kleiner Chip für den Einkaufswagen, falls man mal keine Münze dabei hat.

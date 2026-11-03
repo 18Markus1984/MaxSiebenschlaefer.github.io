@@ -12,6 +12,8 @@ gallery:
   - { src: /images/printables/138464/0.jpg, w: 800, h: 600, fx: 46, fy: 67 }
 links:
   printables: https://www.printables.com/model/138464-thanos-infiniti-war
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:2912970" }
 ---
 
 Ein Bild, das durch Farbwechsel beim Drucken entsteht.

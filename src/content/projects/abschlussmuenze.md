@@ -14,6 +14,8 @@ gallery:
   - { src: /images/printables/143987/2.jpg, w: 720, h: 540, fx: 50, fy: 50 }
 links:
   printables: https://www.printables.com/model/143987-graduation-coin
+extraLinks:
+  - { label: "Auf MyMiniFactory", url: "https://www.myminifactory.com/object/3d-print-graduation-coin-70067" }
 ---
 
 Eine Erinnerungsmünze für unseren Abiturjahrgang.

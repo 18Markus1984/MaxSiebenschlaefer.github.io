@@ -15,6 +15,8 @@ gallery:
   - { src: /images/printables/138457/3.jpg, w: 800, h: 600, fx: 50, fy: 68 }
 links:
   printables: https://www.printables.com/model/138457-bigtreetech-tft-70-t-nut-remix
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:5257729" }
 ---
 
 Ein kleiner Remix, um das Display an Aluprofilen zu befestigen.

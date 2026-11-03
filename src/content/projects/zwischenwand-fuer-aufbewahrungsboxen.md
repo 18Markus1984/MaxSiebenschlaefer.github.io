@@ -13,6 +13,8 @@ gallery:
   - { src: /images/printables/138461/1.jpg, w: 1024, h: 576, fx: 49, fy: 48 }
 links:
   printables: https://www.printables.com/model/138461-extra-wall
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:4337114" }
 ---
 
 Damit lässt sich die Box in kleinere Fächer unterteilen.

@@ -22,6 +22,8 @@ gallery:
   - { src: /images/printables/1149834/2.jpg, w: 1024, h: 768, fx: 50, fy: 50 }
   - { src: /images/printables/1149834/3.jpg, w: 1024, h: 768, fx: 50, fy: 50 }
   - { src: /images/printables/1149834/4.jpg, w: 1024, h: 768, fx: 50, fy: 50 }
+extraLinks:
+  - { label: "Anleitung auf Instructables", url: "https://www.instructables.com/3D-Tetris-on-a-3x3x12-LED-Matrix/" }
 ---
 
 108 LEDs in einem gedruckten Turm, gesteuert über einen Webserver auf dem ESP32. Gespielt wird mit dem Handy im Browser.

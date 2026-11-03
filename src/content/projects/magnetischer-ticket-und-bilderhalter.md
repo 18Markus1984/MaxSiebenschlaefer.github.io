@@ -19,6 +19,8 @@ gallery:
   - { src: /images/printables/271520/7.jpg, w: 675, h: 1200, fx: 50, fy: 52 }
 links:
   printables: https://www.printables.com/model/271520-magnetic-ticketholder
+extraLinks:
+  - { label: "Anleitung auf Instructables", url: "https://www.instructables.com/Magnetic-Ticketholder/" }
 ---
 
 Mit dem Lasercutter war ich nie ganz zufrieden, diese gedruckte Version mit Magneten funktioniert endlich.

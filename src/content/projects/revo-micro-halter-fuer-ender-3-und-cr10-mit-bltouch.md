@@ -17,6 +17,9 @@ gallery:
   - { src: /images/printables/119325/5.jpg, w: 1006, h: 776, fx: 49, fy: 50 }
 links:
   printables: https://www.printables.com/model/119325-revo-micro-ender-3cr10-mount-with-bltouch
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:5200613" }
+  - { label: "Auf MyMiniFactory", url: "https://www.myminifactory.com/object/3d-print-revo-micro-ender-3-mount-with-bltouch-stock-fan-204943" }
 ---
 
 Ich hatte den Revo Micro noch nicht, war aber zu gespannt und habe schon mal den Halter konstruiert. Zwei Bilder zeigen den Abstand zwischen Düse und Sensor.

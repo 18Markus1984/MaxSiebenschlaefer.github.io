@@ -16,6 +16,8 @@ gallery:
   - { src: /images/printables/138469/4.jpg, w: 800, h: 600, fx: 50, fy: 67 }
 links:
   printables: https://www.printables.com/model/138469-storage-container
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:2886855" }
 ---
 
 Ein einfacher Behälter, passend zur Zwischenwand.

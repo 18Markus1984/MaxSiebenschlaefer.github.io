@@ -16,6 +16,8 @@ gallery:
   - { src: /images/printables/102028/4.jpg, w: 1200, h: 675, fx: 50, fy: 50 }
 links:
   printables: https://www.printables.com/model/102028-wood-prusa-bed-holder
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:5171437" }
 ---
 
 Ein Ständer, in dem die Druckplatten sicher und griffbereit stehen.

@@ -15,7 +15,11 @@ gallery:
   - { src: /images/printables/100901/2.jpg, w: 675, h: 1200, fx: 50, fy: 50 }
   - { src: /images/printables/100901/3.jpg, w: 675, h: 1200, fx: 50, fy: 50 }
 links:
+  youtube: https://youtu.be/xA-sFhvwAYU
   printables: https://www.printables.com/model/100901-volume-knob
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:4865823" }
+  - { label: "Auf MyMiniFactory", url: "https://www.myminifactory.com/object/3d-print-volume-knob-170782" }
 ---
 
 Mit dem Drehknopf regle ich die Lautstärke am PC, ein Druck schaltet stumm. Die LEDs ohne passende Ringplatine waren rückblickend keine gute Idee, mit etwas Heißkleber hielt aber alles. Eine Bauanleitung gibt es auch als Video.

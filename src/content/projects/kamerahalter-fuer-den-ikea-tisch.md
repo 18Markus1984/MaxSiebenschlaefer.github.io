@@ -15,6 +15,8 @@ gallery:
   - { src: /images/printables/102100/2.jpg, w: 690, h: 484, fx: 50, fy: 50 }
 links:
   printables: https://www.printables.com/model/102100-cameraholder-ikeatable
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:3720485" }
 ---
 
 Die Kamera lässt sich damit an der Prusa-Einhausung, an einem Schrank oder in einer Zimmerecke befestigen, etwa zur Druckerüberwachung.

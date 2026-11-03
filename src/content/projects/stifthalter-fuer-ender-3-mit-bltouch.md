@@ -14,6 +14,10 @@ gallery:
   - { src: /images/printables/102010/2.jpg, w: 720, h: 720, fx: 38, fy: 51 }
 links:
   printables: https://www.printables.com/model/102010-penholder-ender-3-with-bltouch
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:4337385" }
+  - { label: "Auf MyMiniFactory", url: "https://www.myminifactory.com/object/3d-print-penholder-ender-3-with-bltouch-120761" }
+  - { label: "Anleitung auf Instructables", url: "https://www.instructables.com/Ender-3-Plotter-With-BLtouch-Remix/" }
 ---
 
 Eine kleine Verbesserung eines bestehenden Stifthalters für den Ender 3, damit er trotz BLTouch-Sensor montiert werden kann.

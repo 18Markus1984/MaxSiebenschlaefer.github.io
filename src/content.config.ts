@@ -48,6 +48,8 @@ const projects = defineCollection({
         youtube: z.string().url().optional(),
       })
       .default({}),
+    // Zusätzliche Links, z. B. ein zweites Printables-Modell, das zum selben Projekt gehört
+    extraLinks: z.array(z.object({ label: z.string(), url: z.string().url() })).default([]),
   }),
 });
 

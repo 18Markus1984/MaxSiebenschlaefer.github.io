@@ -13,6 +13,10 @@ gallery:
   - { src: /images/printables/101726/1.jpg, w: 720, h: 720, fx: 50, fy: 50 }
 links:
   printables: https://www.printables.com/model/101726-in-ear-headphonholder
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:2885107" }
+  - { label: "Auf MyMiniFactory", url: "https://www.myminifactory.com/object/3d-print-in-ear-headphonholder-70066" }
+  - { label: "Anleitung auf Instructables", url: "https://www.instructables.com/HeadphoneholderSilly-Solution/" }
 ---
 
 Jeder kennt das verknotete Kabelknäuel in der Schublade. Dieser Halter wickelt In-Ear-Kopfhörer ordentlich auf, damit sie sofort einsatzbereit sind.

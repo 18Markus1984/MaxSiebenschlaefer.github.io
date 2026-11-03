@@ -12,6 +12,9 @@ gallery:
   - { src: /images/printables/101985/0.jpg, w: 720, h: 720, fx: 50, fy: 50 }
 links:
   printables: https://www.printables.com/model/101985-pinterest-app-icon
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:2909555" }
+  - { label: "Auf MyMiniFactory", url: "https://www.myminifactory.com/object/3d-print-pinterest-app-icon-96137" }
 ---
 
 Ein weiteres App-Icon aus meiner kleinen Serie.

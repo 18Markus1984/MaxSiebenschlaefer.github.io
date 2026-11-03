@@ -12,6 +12,9 @@ gallery:
   - { src: /images/printables/101864/0.jpg, w: 720, h: 650, fx: 50, fy: 50 }
 links:
   printables: https://www.printables.com/model/101864-skype-icon
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:2909535" }
+  - { label: "Auf MyMiniFactory", url: "https://www.myminifactory.com/object/3d-print-skype-icon-80771" }
 ---
 
 Ein kleiner Testdruck im Stil eines App-Icons.

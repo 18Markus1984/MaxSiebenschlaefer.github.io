@@ -16,6 +16,9 @@ gallery:
   - { src: /images/printables/101840/4.jpg, w: 720, h: 720, fx: 53, fy: 49 }
 links:
   printables: https://www.printables.com/model/101840-aluminium-beer-holder
+extraLinks:
+  - { label: "Auf Thingiverse", url: "https://www.thingiverse.com/thing:5014399" }
+  - { label: "Auf MyMiniFactory", url: "https://www.myminifactory.com/object/3d-print-aluminium-beer-holder-189685" }
 ---
 
 Die erste Version war schnell aus Holz gesägt und mit Heißkleber zusammengehalten. Die Aluminiumversion ist stabiler und kühlt die Getränke durch ihre Masse.
