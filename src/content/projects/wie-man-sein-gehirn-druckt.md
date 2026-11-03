@@ -1,7 +1,7 @@
 ---
 title: "Wie man sein Gehirn druckt"
-year: 2021
-date: 2021-12-21
+year: 2020
+date: 2020-02-10
 summary: "Anleitung, wie man sein eigenes Gehirn mit kostenloser Software zu Hause druckt."
 category: druck
 group: "Kunst und Design"

@@ -1,7 +1,7 @@
 ---
 title: "Schlüsselanhänger mit NFC"
-year: 2021
-date: 2021-12-27
+year: 2019
+date: 2019-07-08
 summary: "Geburtstagsgeschenk mit Farbwechsel mitten im Druck."
 category: elektronik
 controller: "NFC"

@@ -1,7 +1,7 @@
 ---
 title: "Fernbedienungshalter"
-year: 2021
-date: 2021-12-30
+year: 2020
+date: 2020-05-04
 summary: "Halter für die übliche RGB-Fernbedienung."
 category: druck
 group: "Hobby & Handwerker"

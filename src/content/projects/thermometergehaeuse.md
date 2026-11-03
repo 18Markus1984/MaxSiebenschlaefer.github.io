@@ -1,7 +1,7 @@
 ---
 title: "Thermometergehäuse"
-year: 2022
-date: 2022-02-23
+year: 2020
+date: 2020-05-04
 summary: "Gehäuse für einen üblichen Temperatursensor."
 category: elektronik
 group: "3D-Drucker"

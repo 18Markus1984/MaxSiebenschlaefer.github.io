@@ -1,7 +1,7 @@
 ---
 title: "Bierhalter aus Aluminium"
 year: 2021
-date: 2021-12-28
+date: 2021-10-11
 summary: "Halter für Getränkedosen, der dank Aluminium zusätzlich kühlt."
 category: druck
 group: "Hobby & Handwerker"

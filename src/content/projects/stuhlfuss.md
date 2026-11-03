@@ -1,7 +1,7 @@
 ---
 title: "Stuhlfuß"
-year: 2022
-date: 2022-01-04
+year: 2019
+date: 2019-07-04
 summary: "Ersatzfuß für einen Stuhl mit Gewinde für ein Gummipad."
 category: druck
 group: "Hobby & Handwerker"

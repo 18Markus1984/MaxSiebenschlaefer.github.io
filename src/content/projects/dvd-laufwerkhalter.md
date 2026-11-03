@@ -1,7 +1,7 @@
 ---
 title: "DVD-Laufwerkhalter"
-year: 2022
-date: 2022-01-04
+year: 2020
+date: 2020-06-21
 summary: "Hält mein DVD-Laufwerk in der richtigen Position auf dem PC."
 category: druck
 group: "Hobby & Handwerker"

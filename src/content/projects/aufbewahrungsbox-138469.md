@@ -1,7 +1,7 @@
 ---
 title: "Aufbewahrungsbox"
-year: 2022
-date: 2022-02-23
+year: 2018
+date: 2018-04-30
 summary: "Eine schlichte Box für Kleinkram."
 category: druck
 group: "Haushalt"

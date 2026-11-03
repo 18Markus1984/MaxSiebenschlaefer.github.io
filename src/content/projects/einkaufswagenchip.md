@@ -1,7 +1,7 @@
 ---
 title: "Einkaufswagenchip"
-year: 2021
-date: 2021-12-30
+year: 2019
+date: 2019-10-18
 summary: "Einkaufswagenchip, entworfen für einen Freund."
 category: druck
 group: "Mode"

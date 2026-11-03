@@ -1,7 +1,7 @@
 ---
 title: "iPhone-Hülle"
-year: 2022
-date: 2022-02-23
+year: 2019
+date: 2019-04-08
 summary: "Gedruckte iPhone-Hülle."
 category: druck
 group: "Gadgets"

@@ -1,7 +1,7 @@
 ---
 title: "Abschlussmünze"
-year: 2022
-date: 2022-03-03
+year: 2018
+date: 2018-07-13
 summary: "Münze für meinen Abschlussjahrgang 2018."
 category: druck
 group: "Kunst und Design"

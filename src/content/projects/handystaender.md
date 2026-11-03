@@ -1,7 +1,7 @@
 ---
 title: "Handyständer"
-year: 2022
-date: 2022-01-02
+year: 2019
+date: 2019-10-26
 summary: "Nachkonstruktion eines Handyständers, den ich vor Jahren gekauft habe."
 category: druck
 group: "Gadgets"

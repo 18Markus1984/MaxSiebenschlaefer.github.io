@@ -1,7 +1,7 @@
 ---
 title: "Revo-Micro-Halter für Ender 3 und CR10 mit BLTouch"
 year: 2022
-date: 2022-01-16
+date: 2022-01-15
 summary: "Remix des E3D-Halters aus der Montageanleitung."
 category: druck
 group: "3D-Drucker"

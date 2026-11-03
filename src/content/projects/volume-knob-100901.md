@@ -1,7 +1,7 @@
 ---
 title: "Volume Knob"
 year: 2021
-date: 2021-12-21
+date: 2021-05-22
 summary: "Lautstärkeregler mit Arduino Pro Micro, Drehgeber und LEDs."
 category: elektronik
 controller: "Arduino Pro Micro"

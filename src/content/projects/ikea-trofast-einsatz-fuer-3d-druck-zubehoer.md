@@ -1,7 +1,7 @@
 ---
 title: "IKEA-Trofast-Einsatz für 3D-Druck-Zubehör"
 year: 2021
-date: 2021-12-27
+date: 2021-04-08
 summary: "Zweilagiger Einsatz für eine IKEA-Trofast-Box mit Druckerzubehör."
 category: druck
 group: "Hobby & Handwerker"

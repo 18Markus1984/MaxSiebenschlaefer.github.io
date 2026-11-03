@@ -1,7 +1,7 @@
 ---
 title: "Zwischenwand für Aufbewahrungsboxen"
-year: 2022
-date: 2022-02-23
+year: 2020
+date: 2020-05-04
 summary: "Extra Trennwand für meine Aufbewahrungsbox."
 category: druck
 group: "Haushalt"

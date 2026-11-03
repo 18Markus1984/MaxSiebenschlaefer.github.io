@@ -1,7 +1,7 @@
 ---
 title: "Fragezeichenblock-Remix"
-year: 2021
-date: 2021-12-21
+year: 2019
+date: 2019-01-27
 summary: "Remix des Fragezeichenblocks als Halter für SD- und microSD-Karten."
 category: druck
 group: "Hobby & Handwerker"

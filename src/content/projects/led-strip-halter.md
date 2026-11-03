@@ -1,7 +1,7 @@
 ---
 title: "LED-Strip-Halter"
-year: 2021
-date: 2021-12-21
+year: 2020
+date: 2020-12-11
 summary: "Ganz einfacher Halter für LED-Streifen."
 category: druck
 group: "Hobby & Handwerker"

@@ -1,7 +1,7 @@
 ---
 title: "5-Achs-Roboterarm"
 year: 2021
-date: 2021-12-22
+date: 2021-04-08
 summary: "Roboterarm mit fünf Achsen, gesteuert von einem Raspberry Pi."
 category: elektronik
 controller: "Raspberry Pi"

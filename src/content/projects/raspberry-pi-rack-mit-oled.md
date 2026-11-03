@@ -1,7 +1,7 @@
 ---
 title: "Raspberry-Pi-Rack mit OLED"
-year: 2022
-date: 2022-02-23
+year: 2020
+date: 2020-06-13
 summary: "Rackeinschub für den Raspberry Pi mit kleinem 0,96-Zoll-Display."
 category: elektronik
 controller: "Raspberry Pi"

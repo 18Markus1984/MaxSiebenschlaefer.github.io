@@ -1,7 +1,7 @@
 ---
 title: "Pokémon-Go-Abzeichen mit NFC"
-year: 2021
-date: 2021-12-22
+year: 2019
+date: 2019-08-12
 summary: "Hält man den Anhänger ans Handy, startet Pokémon Go."
 category: elektronik
 controller: "NFC"

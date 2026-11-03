@@ -1,7 +1,7 @@
 ---
 title: "Holzhalter für Prusa-Druckplatten"
 year: 2021
-date: 2021-12-26
+date: 2021-12-22
 summary: "Halter für die Stahlplatten von Prusa Mini und Prusa MK."
 category: druck
 group: "3D-Drucker"

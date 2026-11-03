@@ -1,7 +1,7 @@
 ---
 title: "USB-Kryptex"
-year: 2021
-date: 2021-12-21
+year: 2019
+date: 2019-09-15
 summary: "Kryptex für einen USB-Stick, damit die Daten hinter einem Zahlenschloss liegen."
 category: druck
 group: "Gadgets"

@@ -1,7 +1,7 @@
 ---
 title: "Lasercut-Ständer"
-year: 2022
-date: 2022-01-05
+year: 2021
+date: 2021-12-22
 summary: "Ständer für den Lasercutter, der ohne Kleber hält."
 category: druck
 group: "Kunst und Design"

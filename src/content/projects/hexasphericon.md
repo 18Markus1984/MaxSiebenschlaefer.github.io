@@ -1,7 +1,7 @@
 ---
 title: "Hexasphericon"
-year: 2021
-date: 2021-12-26
+year: 2020
+date: 2020-04-10
 summary: "Hexasphericon, bei mir in Metall gedruckt, geht aber auch mit Kunststoff."
 category: druck
 group: "Kunst und Design"

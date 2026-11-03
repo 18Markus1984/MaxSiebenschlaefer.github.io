@@ -1,7 +1,7 @@
 ---
 title: "Kamerahalter für den IKEA-Tisch"
-year: 2021
-date: 2021-12-27
+year: 2019
+date: 2019-07-24
 summary: "Halter für eine Raspberry-Pi-Kamera an der Druckereinhausung."
 category: elektronik
 controller: "Raspberry Pi"

@@ -1,7 +1,7 @@
 ---
 title: "Motion-Controller-Handschuh"
-year: 2022
-date: 2022-01-10
+year: 2021
+date: 2021-04-08
 summary: "Datenhandschuh, der Winkel und Fingerbewegungen misst."
 category: elektronik
 controller: "ESP8266"

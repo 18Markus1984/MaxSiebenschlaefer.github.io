@@ -1,7 +1,7 @@
 ---
 title: "Wobble-Test"
-year: 2022
-date: 2022-02-23
+year: 2018
+date: 2018-04-30
 summary: "Testdruck, ob der Drucker Probleme mit Wackeln hat."
 category: druck
 group: "3D-Drucker"

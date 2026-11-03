@@ -1,7 +1,7 @@
 ---
 title: "WhatsApp- und Facebook-Icon"
-year: 2021
-date: 2021-12-28
+year: 2019
+date: 2019-06-30
 summary: "Kleines Design, um die Toleranzen des Druckers zu testen."
 category: druck
 group: "Kunst und Design"

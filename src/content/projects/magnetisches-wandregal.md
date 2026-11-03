@@ -1,7 +1,7 @@
 ---
 title: "Magnetisches Wandregal"
-year: 2022
-date: 2022-03-04
+year: 2018
+date: 2018-07-13
 summary: "Kleines Regal, in das zwei Magnete gesteckt werden."
 category: druck
 group: "Haushalt"

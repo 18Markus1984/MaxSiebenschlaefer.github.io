@@ -1,7 +1,7 @@
 ---
 title: "Weihnachtsanhänger"
-year: 2021
-date: 2021-12-21
+year: 2020
+date: 2020-12-27
 summary: "Schneller Weihnachtsbaumschmuck, an einem Abend entworfen."
 category: druck
 group: "Saisonale Designs"

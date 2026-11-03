@@ -1,7 +1,7 @@
 ---
 title: "Batteriehalter für Anycubic i3 Mega"
-year: 2022
-date: 2022-02-23
+year: 2018
+date: 2018-05-13
 summary: "Batteriefach, um eine Niedervoltlampe ohne Eingriff ins Netzteil zu betreiben."
 category: druck
 group: "3D-Drucker"

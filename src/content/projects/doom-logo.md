@@ -1,7 +1,7 @@
 ---
 title: "Doom-Logo"
-year: 2021
-date: 2021-12-26
+year: 2018
+date: 2018-07-13
 summary: "Kleines Doom-Logo zum Drucken."
 category: druck
 group: "Kunst und Design"

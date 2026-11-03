@@ -1,7 +1,7 @@
 ---
 title: "Kleine Knopfbox mit WLAN"
-year: 2022
-date: 2022-01-07
+year: 2021
+date: 2021-05-22
 summary: "Knopfbox, die per WLAN etwas bestellen soll."
 category: elektronik
 group: "Hobby & Handwerker"

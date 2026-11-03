@@ -1,7 +1,7 @@
 ---
 title: "Wobble-Test"
-year: 2021
-date: 2021-12-27
+year: 2018
+date: 2018-05-01
 summary: "Wobble-Test kombiniert mit dem XYZ-Würfel."
 category: druck
 group: "3D-Drucker"

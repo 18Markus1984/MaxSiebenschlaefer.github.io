@@ -1,7 +1,7 @@
 ---
 title: "Zerbrochenes Marvel-Logo"
-year: 2022
-date: 2022-01-02
+year: 2019
+date: 2019-08-12
 summary: "Marvel-Logo in zerbrochener Optik."
 category: druck
 group: "Kunst und Design"

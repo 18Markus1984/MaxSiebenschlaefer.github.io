@@ -1,7 +1,7 @@
 ---
 title: "Magnetrührer"
-year: 2022
-date: 2022-01-06
+year: 2020
+date: 2020-08-18
 summary: "Rührgerät für Labor und Werkstatt, betrieben mit 6 bis 28 Volt."
 category: elektronik
 group: "Hobby & Handwerker"

@@ -1,7 +1,7 @@
 ---
 title: "BTT-TFT70-Halter für Nutprofile"
 year: 2022
-date: 2022-02-23
+date: 2022-02-22
 summary: "Remix für die Montage an T-Nut-Profilen."
 category: druck
 group: "3D-Drucker"

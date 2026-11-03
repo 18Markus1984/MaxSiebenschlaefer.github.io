@@ -1,7 +1,7 @@
 ---
 title: "Griff"
-year: 2022
-date: 2022-01-02
+year: 2020
+date: 2020-08-16
 summary: "Ein einfacher Griff zum Drucken."
 category: druck
 group: "Kostüme & Accessoires"

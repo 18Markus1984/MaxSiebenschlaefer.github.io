@@ -1,7 +1,7 @@
 ---
 title: "9-V-Batteriefach mit Schalter"
-year: 2022
-date: 2022-01-04
+year: 2021
+date: 2021-01-06
 summary: "Gehäuse für einen 9-V-Block mit Schalter."
 category: elektronik
 group: "Hobby & Handwerker"

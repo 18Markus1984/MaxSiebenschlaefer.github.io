@@ -1,7 +1,7 @@
 ---
 title: "Mein Logo"
-year: 2022
-date: 2022-01-02
+year: 2021
+date: 2021-04-08
 summary: "Mein Logo mit einem kleinen Loch auf der Rückseite für einen Nagel."
 category: druck
 group: "Kunst und Design"

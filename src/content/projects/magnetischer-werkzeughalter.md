@@ -1,7 +1,7 @@
 ---
 title: "Magnetischer Werkzeughalter"
 year: 2021
-date: 2021-12-22
+date: 2021-04-08
 summary: "Kleine Magnetleiste für Werkzeuge, die schnell griffbereit sein sollen."
 category: druck
 group: "Hobby & Handwerker"

@@ -1,7 +1,7 @@
 ---
 title: "In-Ear-Kopfhörerhalter"
-year: 2021
-date: 2021-12-27
+year: 2018
+date: 2018-04-30
 summary: "Mein Beitrag zu einem Instructables-Wettbewerb."
 category: druck
 group: "Hobby & Handwerker"

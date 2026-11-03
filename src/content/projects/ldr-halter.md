@@ -1,7 +1,7 @@
 ---
 title: "LDR-Halter"
-year: 2021
-date: 2021-12-26
+year: 2019
+date: 2019-10-18
 summary: "Teil meines Lichtsensor-Systems, das Tag und Nacht in meinem Zimmer erkennt."
 category: elektronik
 controller: "Arduino Nano"

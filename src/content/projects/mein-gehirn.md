@@ -1,7 +1,7 @@
 ---
 title: "Mein Gehirn"
-year: 2021
-date: 2021-12-26
+year: 2019
+date: 2019-10-20
 summary: "Mein eigenes Gehirn, aus einem MRT-Scan in ein 3D-Modell umgewandelt."
 category: druck
 group: "Kunst und Design"

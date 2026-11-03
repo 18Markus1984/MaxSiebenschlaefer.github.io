@@ -1,7 +1,7 @@
 ---
 title: "Arduino-Attrappenbombe"
-year: 2021
-date: 2021-12-26
+year: 2019
+date: 2019-04-12
 summary: "Spielgerät für Pfadfinderspiele oder Kindergeburtstage."
 category: elektronik
 controller: "Arduino"

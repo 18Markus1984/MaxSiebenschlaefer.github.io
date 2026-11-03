@@ -1,7 +1,7 @@
 ---
 title: "Speicher-Evolution"
-year: 2021
-date: 2021-12-27
+year: 2019
+date: 2019-08-21
 summary: "Wandbild mit der Entwicklung der Datenspeicher, mit echten Objekten."
 category: druck
 group: "Kunst und Design"

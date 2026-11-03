@@ -1,7 +1,7 @@
 ---
 title: "Filamenthalter"
-year: 2021
-date: 2021-12-21
+year: 2018
+date: 2018-04-30
 summary: "Einfaches Lagersystem für viele Filamentrollen mit PVC-Rohren."
 category: druck
 group: "Hobby & Handwerker"

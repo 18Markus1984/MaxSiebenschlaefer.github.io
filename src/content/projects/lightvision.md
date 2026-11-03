@@ -1,6 +1,6 @@
 ---
 title: LightVision
-year: 2022
+year: 2021
 summary: LED-Matrix mit eigenem Server und Raspberry-Pi-Client.
 category: elektronik
 controller: Raspberry Pi
@@ -11,7 +11,7 @@ links:
   github: https://github.com/18Markus1984/LightVision
   printables: https://www.printables.com/model/101375-light-vision-raspberry-pi-led-matrix
   youtube: https://youtu.be/3QI4w06QXg0
-date: 2022-01-19
+date: 2021-04-08
 group: "Hobby & Handwerker"
 printablesId: "101375"
 downloads: 21

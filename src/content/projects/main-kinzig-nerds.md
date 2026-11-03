@@ -1,7 +1,7 @@
 ---
 title: "Main Kinzig Nerds"
-year: 2021
-date: 2021-12-28
+year: 2019
+date: 2019-10-16
 summary: "Logo für einen Vortrag über 3D-Drucker."
 category: druck
 group: "Kunst und Design"

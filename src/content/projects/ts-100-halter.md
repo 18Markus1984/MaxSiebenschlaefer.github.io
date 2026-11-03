@@ -1,7 +1,7 @@
 ---
 title: "TS-100-Halter"
-year: 2022
-date: 2022-02-23
+year: 2020
+date: 2020-07-10
 summary: "Einsatz, der den Lötkolben TS-100 im Transportkoffer fixiert."
 category: druck
 group: "Hobby & Handwerker"

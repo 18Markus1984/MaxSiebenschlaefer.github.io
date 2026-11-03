@@ -1,7 +1,7 @@
 ---
 title: "Thanos als 2D-Bild"
-year: 2022
-date: 2022-02-23
+year: 2018
+date: 2018-05-19
 summary: "Thanos als mehrfarbiges 2D-Druckbild."
 category: druck
 group: "Kunst und Design"

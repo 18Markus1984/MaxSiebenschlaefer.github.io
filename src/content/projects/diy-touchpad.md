@@ -1,7 +1,7 @@
 ---
 title: "DIY-Touchpad"
-year: 2021
-date: 2021-12-27
+year: 2020
+date: 2020-02-15
 summary: "Gehäuse für ein selbstgebautes Touchpad."
 category: elektronik
 group: "Hobby & Handwerker"

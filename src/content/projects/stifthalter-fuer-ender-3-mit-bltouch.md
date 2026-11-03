@@ -1,7 +1,7 @@
 ---
 title: "Stifthalter für Ender 3 mit BLTouch"
-year: 2021
-date: 2021-12-28
+year: 2020
+date: 2020-05-04
 summary: "Anpassung des Stifthalters, damit er auch mit BLTouch passt."
 category: druck
 group: "3D-Drucker"

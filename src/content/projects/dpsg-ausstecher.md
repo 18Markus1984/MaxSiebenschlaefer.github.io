@@ -1,7 +1,7 @@
 ---
 title: "DPSG-Ausstecher"
 year: 2021
-date: 2021-12-27
+date: 2021-12-22
 summary: "Plätzchenausstecher für unsere Pfadfinder."
 category: druck
 group: "Saisonale Designs"

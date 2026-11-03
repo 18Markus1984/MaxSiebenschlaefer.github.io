@@ -1,7 +1,7 @@
 ---
 title: "Aufbewahrungsbox"
-year: 2022
-date: 2022-01-05
+year: 2019
+date: 2019-08-15
 summary: "Box für Notizen, Visitenkarten, USB-Sticks oder kleine Drucke."
 category: druck
 group: "Hobby & Handwerker"

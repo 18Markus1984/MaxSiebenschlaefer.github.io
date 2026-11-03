@@ -1,7 +1,7 @@
 ---
 title: "Testdruck für Gewindeeinsätze"
-year: 2022
-date: 2022-02-23
+year: 2019
+date: 2019-10-27
 summary: "Testdruck für M5-Einschmelzmuttern mit drei Lochdurchmessern."
 category: druck
 group: "3D-Drucker"

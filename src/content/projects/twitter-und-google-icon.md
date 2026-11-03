@@ -1,7 +1,7 @@
 ---
 title: "Twitter- und Google+-Icon"
-year: 2021
-date: 2021-12-28
+year: 2018
+date: 2018-05-20
 summary: "App-Icon zum Drucken. Google+ lebt in unseren Herzen weiter."
 category: druck
 group: "Kunst und Design"

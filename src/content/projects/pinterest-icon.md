@@ -1,7 +1,7 @@
 ---
 title: "Pinterest-Icon"
-year: 2021
-date: 2021-12-28
+year: 2018
+date: 2018-07-09
 summary: "App-Icon von Pinterest als Druck."
 category: druck
 group: "Kunst und Design"
