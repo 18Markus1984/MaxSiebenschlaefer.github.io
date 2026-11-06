@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/url';
+---
+<Base title="Seite nicht gefunden">
+  <section style="min-height:50vh;display:flex;flex-direction:column;justify-content:center;gap:20px;max-width:620px;padding-top:40px">
+    <p class="sec num" style="font-size:15px">Fehler 404</p>
+    <h1 style="font-size:56px;line-height:1.02">Diese Seite gibt es nicht</h1>
+    <p class="sec" style="font-size:19px">Vielleicht findest du das Projekt bei den Modellen oder im Logbuch.</p>
+    <div class="actions">
+      <a class="btn btn-p" href={url('/modelle/')}>Alle Modelle</a>
+      <a class="btn btn-s" href={url('/')}>Zur Startseite</a>
+    </div>
+  </section>
+</Base>

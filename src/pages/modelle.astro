@@ -27,7 +27,7 @@ const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9äöüß]+/g, '-');
     <p class="visually-hidden" aria-live="polite" id="filter-status"></p>
     <ul class="archive" id="archive">
       {all.map((p) => (
-        <li data-group={slug(p.data.group)}>
+        <li data-group={slug(p.data.group)} data-cat={p.data.category} data-date={p.data.date ?? `${p.data.year}-01-01`} data-dl={p.data.downloads ?? 0} data-likes={p.data.likes ?? 0} data-title={p.data.title}>
           <a href={url(`/projekte/${p.id}/`)}>
             <Shot shot={cover(p)} ratio={4 / 3} width={300} />
             <h2>{p.data.title}</h2>

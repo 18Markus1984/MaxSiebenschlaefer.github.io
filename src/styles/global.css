@@ -20,7 +20,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: 'Bricolage Grotesque Variable', system-ui, sans-serif;
+  font-family: 'IBM Plex Sans Variable', system-ui, sans-serif;
   font-size: 17px;
   line-height: 1.55;
 }
@@ -216,7 +216,9 @@ a:hover .shot img { transform: scale(1.02); }
   .section { padding-top: 64px; }
   .rail { padding: 4px 16px 24px; margin: 0 -16px; scroll-padding-inline: 16px; grid-auto-columns: 76%; }
   .door { padding: 24px; min-height: 200px; }
-  .board { grid-template-columns: minmax(0, 1fr); padding: 44px 22px 84px; }
+  .board { grid-template-columns: minmax(0, 1fr); padding: 72px 24px 96px; }
+  .board .hole { width: 16px; height: 16px; box-shadow: 0 0 0 5px var(--gold); }
+  .header-pins { left: 50%; transform: translateX(-50%); bottom: 30px; grid-template-columns: repeat(12, 12px); grid-template-rows: repeat(2, 12px); gap: 8px; }
   .board .lg { max-width: 130px; }
   .header-pins { left: 24px; grid-template-columns: repeat(8, 14px); }
   .header-pins span:nth-child(n+9):nth-child(-n+12), .header-pins span:nth-child(n+21) { display: none; }

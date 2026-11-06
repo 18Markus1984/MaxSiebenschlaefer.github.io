@@ -40,3 +40,4 @@ npm run dev
 
 - Impressum (`src/pages/impressum.astro`) und Datenschutz (`src/pages/datenschutz.astro`) ausfüllen, die Platzhalter stehen in eckigen Klammern.
 - E-Mail-Adresse in `src/data/site.json` eintragen, wenn sie im Fuß stehen soll.
+
